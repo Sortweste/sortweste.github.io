@@ -1,8 +1,126 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   </head>
+
   <body>
-    <h1>Beta Test!</h1>
+
+    <div class="parallax">
+      <h1 class="text-center p-5 text-white">Creando nuestro primer proyecto en Eclipse!</h1>
+    </div>
+
+    <h1 class="text-center m-5" style="color: #2D2B2C">Creando un nuevo proyecto</h1>
+
+    <div class="row">
+      <img src="./images/paso1.png" class="m-5 rounded float-left img-fluid" alt="">
+      <p class="col-md-4 mt-5">Abrimos el IDE Eclipse y creamos un nuevo proyecto Web dinámico.</p>
+    </div>
+
+    <div class="row">
+      <p class="offset-3 mt-5">Agregamos un nombre a nuestro proyecto.</p>
+      <img src="./images/paso2.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+
+
+    <div class="row">
+      <img src="./images/paso4.png" class="m-5 rounded float-left img-fluid" alt="">
+      <p class="col-md-4 mt-5">Nos aseguramos que el packaging sea de tipo war.</p>
+    </div>
+
+    <div class="row">
+      <p class="offset-3 mt-5">Esto nos generara un archivo pom.xml.</p>
+      <img src="./images/paso5.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+    <div class="row">
+      <img src="./images/paso6.png" class="m-5 rounded float-left img-fluid" alt="">
+      <p class="col-md-4 mt-5">Navegamos hasta la pestaña de Servidores y damos click al enlace que aparece.</p>
+    </div>
+
+    <div class="row">
+      <p class="col-md-5 m-5">Nos pedira seleccionar el tipo de servidor, en nuestro caso usaremos Tomcat 9.x
+        <br>
+        Nota: Puede que no nos aparezca esta versión, por lo que necesitamos añadirla.
+      </p>
+      <img src="./images/paso7.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+    <div class="row">
+      <img src="./images/paso8.png" class="m-5 rounded float-left img-fluid" alt="">
+      <p class="col-md-4 mt-5">Configuramos una variable de entorno Tomcat.</p>
+    </div>
+
+    <div class="row">
+      <p class="col-md-2 m-5">Podremos notar que nuestro servidor ha sido agregado!
+      </p>
+      <img src="./images/paso9.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+    <div class="row">
+      <img src="./images/paso10.png" class="m-5 rounded float-left img-fluid" alt="">
+      <p class="col-md-4 mt-5">En nuestra carpeta WebContent, creamos un nuevo archivo index.jsp</p>
+    </div>
+
+    <div class="row">
+      <p class="offset-3 mt-5">Puede que nos aparezca el siguiente error
+      </p>
+      <img src="./images/paso11.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+    <div class="row">
+      <img src="./images/paso12.png" class="m-5 rounded float-left img-fluid" alt="">
+    </div>
+    <p class="text-center  mt-5">Para corregirlo, navegamos a las propiedades del proyecto y marcamos nuestro servidor</p>
+
+    <div class="row">
+      <p class="col-md-5 m-5">En la pestaña de Servidores, le damos click derecho a nuestro servidor y navegamos a
+        Add and Remove
+      </p>
+      <img src="./images/paso13.png" class="m-5 rounded float-right img-fluid" alt="">
+    </div>
+
+
+        <div class="row">
+          <img src="./images/paso14.png" class="m-5 rounded float-left img-fluid" alt="">
+          <p class="col-md-4 mt-5">Levantamos nuestro servidor</p>
+        </div>
+
+        <div class="row">
+          <p class="offset-3 mt-5">Y vemos nuestra página en el puerto 8080!
+          </p>
+          <img src="./images/paso15.png" class="m-5 rounded float-right img-fluid" alt="">
+        </div>
+
+        <h1 class="m-5 text-center">Felicidades! Lo hemos configurado</h1>
+
+  <footer style="background-color: #2D2B2C; color: white; height: 16rem">
+      <h1 class="h1 p-5">¿Tienes dudas?</h1>
+      <p class="ml-5">Contactanos: 00123216@uca.edu.sv </p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    window.sr = ScrollReveal()
+
+       sr.reveal('.float-left', {
+         duration: 2000,
+         origin: 'left',
+         distance: '19rem'
+       })
+       sr.reveal('.float-right', {
+         duration: 2000,
+         origin: 'right',
+         distance: '19rem'
+       })
+  </script>
+
   </body>
 </html>
