@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/parallaxSlider.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+
+  <body>
+
+  <div class="parallax-window" data-parallax="scroll" data-image-src="./images/Background.jpg">
+
+    <nav class="navbar sticky-top navbar-expand-lg" style="background-color:#34302d; ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <h1 class="text-center text-white">Programación de N-Capas</h1>
+      </div>
+      </nav>
+
+      <div class="bg-white rounded col-md-8 offset-2 mt-5 p-5">
+
+        <h1 class="text-center m-5" style="color: #2D2B2C">Creando un Servlet</h1>
+
+        <p class="mt-5">Continuando con el proyecto <i>Ejemplo</i> que trabajamos en la lección anterior, crearemos un
+          archivo <i>web.xml</i> dentro de la carpeta <i> WebContent</i> <i>-></i> <i>WEB-INF </i>
+        </p>
+        <img src="./images/ServletImages/paso1.jpg" class="m-5 rounded float-left img-fluid" alt=""/>
+
+        <p class="mt-5 ml-5 mr-5 text-center">Dentro, escribiremos el siguiente codigo: </p>
+        <img src="./images/ServletImages/paso2.jpg" class="m-5 rounded float-none img-fluid" alt=""/>
+
+        <p class="text-left mt-3">Explicaremos el código:</p>
+
+        <p class="col-md-12">Declaramos un servlet</p>
+
+        <div class="row">
+          <pre class="col-md-6 text-info"><code>&ltservlet-name&gt</code></pre>
+          <p class="col-md-6">Define el nombre del Servlet</p>
+      </div>
+
+      <div class="row">
+        <pre class="col-md-6 text-info"><code>&ltservlet-class&gt</code></pre>
+        <p class="col-md-6">Define la clase a la que se asocia el Servlet</p>
+    </div>
+
+    <p class="col-md-12">Asignamos el Servlet a un EndPoint</p>
+
+    <div class="row">
+      <pre class="col-md-6 text-info"><code>&ltservlet-mapping&gt</code></pre>
+      <p class="col-md-6">Establece la relación entre el Servlet y una URL</p>
+  </div>
+
+  <div class="row">
+    <pre class="col-md-6 text-info"><code>&ltservlet-name&gt</code></pre>
+    <p class="col-md-6">Define el nombre del Servlet que queremos asociar</p>
+</div>
+
+<div class="row">
+  <pre class="col-md-6 text-info"><code>&lturl-pattern&gt</code></pre>
+  <p class="col-md-6">Define el EndPoint de nuestra url http://host:port + WebAppName</p>
+</div>
+
+        Referencia:
+        <a target="_blank" href="https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039287">https://docs.oracle.com/cd/E13222_01/wls/docs81/webapp/web_xml.html#1039287</a>
+
+        <p class="mt-5 ml-5 mr-5 text-center">Modificamos nuestra clase asociada al Servlet: </p>
+        <img src="./images/ServletImages/paso3.JPG" class="m-5 rounded float-none img-fluid" alt=""/>
+
+        <p class="col-md-12">Los metodos doGet y doPost son similares a los de una API</p>
+
+      </div>
+
+      </div>
+
+      <footer style="background-color:#34302d;" class="h-25">
+
+      </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./js/parallax.js-1.5.0/parallax.min.js"></script>
+
+<script type="text/javascript">
+  window.sr = ScrollReveal()
+
+     sr.reveal('.float-left', {
+       duration: 2000,
+       origin: 'left',
+       distance: '19rem'
+     })
+     sr.reveal('.float-none', {
+       duration: 2000,
+       origin: 'right',
+       distance: '19rem'
+     })
+</script>
+
+</body>
+</html>
