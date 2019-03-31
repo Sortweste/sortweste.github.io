@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/parallaxSlider.css">
+    <link rel="stylesheet" href="./css/prism.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+
+  <body>
+
+  <div class="parallax-window" data-parallax="scroll" data-image-src="./images/Background.jpg">
+
+    <nav class="navbar sticky-top navbar-expand-lg" style="background-color:#34302d; ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <h1 class="text-center text-white">Programación de N-Capas</h1>
+      </div>
+      </nav>
+
+      <div class="bg-white rounded col-md-8 offset-2 mt-5 p-5">
+
+        <h1>Spring MVC</h1>
+
+        <img src="./images/mvcTeo/intro.png" class="img-fluid offset-2 mb-5">
+
+        <h2 class="my-5" style="color: #6db33f">Componentes</h2>
+
+        <section class="bg-primary d-block rounded p-3 h-50 mr-5 mb-3" style="opacity: 0.8; color: white">
+            <h3 class="mb-3">DispatcherServlet</h3>
+            <p class="col-md-12">
+            Es el front controller (Maneja y redirige las peticiones HTTP) de la aplicación.<br>
+            Hereda de la clase javax.servlet.http.HttpServlet.<br>
+            Envía la petición a los manejadores registrados para su procesamiento.<br>
+            </p>
+            <p>
+            Las aplicaciones solo tiene un DispatcherServlet con el contexto de la URL raíz ( "/" )<br>
+            Toda peticion dirigida a ese dominio será manejada.
+            </p>
+            Referencia :<br>
+            <a href="https://howtodoinjava.com/spring5/webmvc/spring-dispatcherservlet-tutorial/"><p class="reference">https://howtodoinjava.com/spring5/webmvc/spring-dispatcherservlet-tutorial/</p></a>
+        </section>
+
+        <section class="bg-danger d-block rounded p-3 h-50 ml-5 mb-3" style="opacity: 0.8; color: white">
+            <h3 class="mb-3">HandlerMapping</h3>
+            <p class="col-md-12">
+            Es una interface que define una relación entre las peticiones y los controladores.<br>
+             El Dispatcher Servlet lo utiliza para saber donde tiene que mandar cada petición
+            </p>
+            Referencia :<br>
+            <a href="https://www.baeldung.com/spring-handler-mappings"><p class="reference">https://www.baeldung.com/spring-handler-mappings</p></a>
+        </section>
+
+        <section class="bg-success d-block rounded p-3 h-50 mr-5 mb-3" style="opacity: 0.8; color: white">
+            <h3 class="mb-3">Controller</h3>
+            <p class="col-md-12">
+            Clase que recibe la petición del DispatcherServlet para procesarla según la lógica de negocio<br>
+            Devolverá el nombre lógico de la vista a mostrar
+            </p>
+        </section>
+
+        <section class="bg-warning d-block rounded p-3 h-50 ml-5 mb-3" style="opacity: 0.9; color: white">
+          <h3 class="mb-3">ModelAndView</h3>
+          <p class="col-md-12">
+          Contiene la información que se quiere mostrar en la vista.
+          </p>
+        </section>
+
+        <section class="bg-secondary d-block rounded p-3 h-50 mr-5 mb-3" style="opacity: 0.8; color: white">
+            <h3 class="mb-3">ViewResolver</h3>
+            <p class="col-md-12">
+            Obteniene el archivo físico (páginas JSP) que se usará para generar
+            la vistas a partir del nombre lógico devuelto por el controlador.
+            </p>
+            Referencia :<br>
+            <a href="http://acodigo.blogspot.com/2017/04/spring-mvc-viewresolver.html"><p class="reference">http://acodigo.blogspot.com/2017/04/spring-mvc-viewresolver.html</p></a>
+        </section>
+
+        <section class="bg-info d-block rounded p-3 h-50 ml-5 mb-3" style="opacity: 0.8; color: white">
+            <h3 class="mb-3">View</h3>
+            <p class="col-md-12">
+              Es la página JSP  que contiene los elementos que serán procesados con la información del ModelAndView para su despliegue al usuario.
+            </p>
+        </section>
+
+        <h2 class="my-5" style="color: #6db33f">Funcionamiento</h2>
+        
+
+      </div>
+
+      </div>
+
+      <footer style="background-color:#34302d;" class="h-25">
+
+      </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./js/parallax.js-1.5.0/parallax.min.js"></script>
+  <script src="./js/prism.js"></script>
+
+  <script type="text/javascript">
+  window.sr = ScrollReveal()
+
+     sr.reveal('.float-left', {
+       duration: 2000,
+       origin: 'left',
+       distance: '19rem'
+     })
+     sr.reveal('.float-none', {
+       duration: 2000,
+       origin: 'right',
+       distance: '19rem'
+     })
+  </script>
+
+  </body>
+  </html>
