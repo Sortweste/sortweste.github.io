@@ -35,7 +35,12 @@
 
         <img src="./images/mvcTeo/intro.png" class="img-fluid offset-2 mb-5">
 
-        <h2 class="my-5" style="color: #6db33f">Componentes</h2>
+        <p class="my-2">Es un Framework que provee la arquitectura Modelo-Vista-Controlador para usarse en el desarrollo de aplicaciones web.<br>
+          Gran parte de la funcionalidad de Spring está basada en el patrón de Inyección de Dependencias
+        </p>
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/MWtrUxvdJlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h2 class="my-3" style="color: #6db33f">Componentes</h2>
 
         <section class="bg-primary d-block rounded p-3 h-50 mr-5 mb-3" style="opacity: 0.8; color: white">
             <h3 class="mb-3">DispatcherServlet</h3>
@@ -95,7 +100,34 @@
         </section>
 
         <h2 class="my-5" style="color: #6db33f">Funcionamiento</h2>
-        
+
+        <img class="img-fluid" src="./images/mvcTeo.jpg">
+
+        <ol class="my-3">
+          <li class="my-2">
+            El DispatcherServlet recibe una petición HTTP.
+          </li>
+          <li class="my-2">
+            El DispatcherServlet consulta al HandlerMapping para decidir a que Controller enviará la petición.<br>
+            El HandlerMapping devuelve el Controller adecuado.
+          </li>
+          <li class="my-2">
+            El Controller procesa la petición y envía un objeto ModelAndView con la información del modelo y el nombre de la vista.
+          </li>
+          <li class="my-2">
+            Con esta información el DispatcherServlet consulta al ViewResolver para resolver el nombre de la vista con el recurso de la vista.<br>
+            El ViewResolver returna la información de la View.
+          </li>
+          <li class="my-2">
+            El DispatcherServlet con esta información invoca a la vista (JSP) involucrada. <br>
+            View devuelve la página renderizada con la información del modelo. <br>
+            El DispatcherServlet devuelve una respuesta HTTP.
+          </li>
+        </ol>
+
+        Referencia:
+        <a href="http://simplej2eetutorials.blogspot.com/2014/05/spring-mvc-tutorial.html">http://simplej2eetutorials.blogspot.com/2014/05/spring-mvc-tutorial.html</a>
+
 
       </div>
 
