@@ -1,0 +1,39 @@
+:root{
+    font-size: 16px;
+  }
+
+@media (min-width: 48rem) and (max-width: 73rem){
+    iframe{
+        height: 32rem;
+        width: 25rem;
+    }
+    img.offset-2{
+        margin-left: 0%;
+    }
+}
+
+@media(min-width: 74rem){
+    iframe{
+        height: 32rem;
+        width: 50rem;
+    }
+}
+
+@media(max-width: 48rem){
+    .BlockContainer{
+        margin-left: 0%
+    }
+    img.offset-2{
+        margin-left: 0%;
+    }
+    iframe{
+        height: 32rem;
+        max-width: 37rem;
+    }
+}
+
+@media (min-width: 20rem)and (max-width: 47rem){
+    .responsiveLink{
+        margin-left: 0em;
+    }
+}
