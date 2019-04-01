@@ -20,5 +20,13 @@
   .BlockContainer{
     max-width: 35rem;
     margin-left: 0rem;
+    padding: 5;
+  }
+  div.row img.float-left{
+    display: block;
+    margin-left: 0rem;
+  }
+  div.row{
+    display: block;
   }
 }
