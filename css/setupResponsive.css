@@ -1,0 +1,24 @@
+:root{
+  font-size: 16px;
+}
+
+@media (min-width: 48rem) and (max-width: 61rem){
+    .BlockContainer{
+      max-width: 59rem;
+      margin-left: 0rem;
+    }
+}
+
+@media (min-width: 32rem) and (max-width: 48rem){
+  .BlockContainer{
+    max-width: 47rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (min-width: 18rem) and (max-width: 37rem){
+  .BlockContainer{
+    max-width: 35rem;
+    margin-left: 0rem;
+  }
+}

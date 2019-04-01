@@ -31,13 +31,60 @@
 
       <div class="bg-white rounded col-md-8 offset-2 mt-5 p-5">
 
+        <p class="col-md-12 col-sm-12 col-12">Crearemos un nuevo proyecto dinámico web:</p>
+        <img src="./images/SpringSetupImages/paso1.png" class="img-fluid my-3">
 
+        <p class="col-md-12 col-sm-12 col-12">Convertimos nuestro proyecto a un proyecto Maven:</p>
+        <img src="./images/SpringSetupImages/paso2.png" class="img-fluid my-3">
+
+        <p class="col-md-12 col-sm-12 col-12">Nos aseguramos que sea de tipo war:</p>
+        <img src="./images/SpringSetupImages/paso3.png" class="img-fluid my-3">
+
+        <p class="col-md-12">Añadiremos las siguientes dependencias:</p>
+        <pre class="rounded"><code class="language-xml">
+          &ltproject...&gt
+          ...
+          &ltdependencies&gt
+
+            &lt!--Spring MVC--&gt
+            &ltdependency&gt
+              &ltgroupId&gtorg.springframework&lt/groupId&gt
+              &ltartifactId&gtspring-webmvc&lt/artifactId&gt
+              &ltversion&gt5.1.4.RELEASE&lt/version&gt
+            &lt/dependency&gt
+
+            &lt!--Servlet--&gt
+            &ltdependency&gt
+              &ltgroupId&gtjavax.servlet&lt/groupId&gt
+              &ltartifactId&gtjavax.servlet-api&lt/artifactId&gt
+              &ltversion&gt3.0.1&lt/version&gt
+            &lt/dependency&gt
+
+          &lt/dependencies&gt
+          ...
+          &lt/project&gt
+    </code></pre>
+
+    <p class="col-md-12 col-sm-12 col-12">Al guardar, se nos instalaran los siguientes paquetes:</p>
+    <img src="./images/SpringSetupImages/paso5.png" class="img-fluid my-3">
+
+    <p class="col-md-12 col-sm-12 col-12">Crearemos un paquete dentro de
+      <i>Java Resources</i> -> <i>src</i> llamado <i>com.company.project.configuration</i><br>
+      Dentro de este paquete, crearemos una clase llamada <i>SpringConfiguration.java</i>
+    </p>
 
         <pre class="rounded">
           <code class="language-java">
+//Indica que esta es una clase de configuración para el framework.
 @Configuration
+
+//Habilita el soporte de definición de controladores por medio de anotaciones
 @EnableWebMvc
+
+//Indica el paquete raíz donde se encontrarán las clases de los controladores
 @ComponentScan(basePackages	= "com.sort.capas")
+
+
 public class SpringConfiguration implements WebMvcConfigurer{
 
 	@Bean
@@ -50,6 +97,8 @@ public class SpringConfiguration implements WebMvcConfigurer{
 }
           </code>
       </pre>
+
+
 
       </div>
 
