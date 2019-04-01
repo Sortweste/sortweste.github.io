@@ -35,5 +35,8 @@
 @media (min-width: 20rem)and (max-width: 47rem){
     .responsiveLink{
         margin-left: 0em;
+        text-align: center;
+        vertical-align: middle;
+        display: initial;
     }
 }
