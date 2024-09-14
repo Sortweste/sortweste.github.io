@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Main.astro"
+
+const items = [
+	{
+		name: 'Festival de los Farolitos',
+		slug: '/farolitos',
+		description: 'Celebracion en honor a las víspera del nacimiento de la Virgen María',
+		ubicacion: 'Ahuachapan',
+		background: '/images/farolitos_1.png'
+	},
+	{
+		name: 'Festival de la Calabiuza',
+		slug: '/calabiuza',
+		description: 'Se celebra cada 1 de noviembre. Tiran de carretas chillonas y recorren las principales calles del municipio. Ángeles somos y del cielo venimos pidiendo ayote para todo el camino',
+		ubicacion: 'Tonacatepeque',
+		background: '/images/calabiuza_1.png'
+	},
+	{
+		name: 'Festival de las Bolas de Fuego',
+		slug: '/bolas-de-fuego',
+		description: 'Equipos que se lanzan entre sí bolas de fuego. Celebrada cada 31 de agosto, asegura que el Diablo lanzaba bolas de fuego a San Jerónimo Doctor, patrono del Municipio, cuando éste oraba.',
+		ubicacion: 'Nejapa',
+		background: '/images/nejapa_1.webp'
+	},
+	{
+		name: 'Festival de la Piña',
+		slug: '/pina',
+		description: 'Siendo el de mayor cultivo en el municipio. La fiesta surgió para promover este producto',
+		ubicacion: 'Santa Maria Ostuma',
+		background: '/images/pina_1.jpg'
+	}
+];
+---
+<Layout>
+	<h1 class="text-center mb-4 text-3xl">Festivales en El Salvador</h1>
+	{items.map((item) => (
+		<a style={{ 'background-image': `url("${item.background}")` }} href={item.slug} class:list={['w-full px-[2rem] h-64 items-center py-8 flex flex-col bg-cover bg-center bg-no-repeat']}>
+			<div class="flex flex-col rounded-md w-80 h-56 py-4 px-6 bg-slate-100 text-black">
+				<p class="font-bold text-center text-base">{item.name}</p>
+				<p class="text-md text-center my-2">{item.ubicacion}</p>
+				<p class="text-sm mt-4 line-clamp-3">{item.description}</p>
+			</div>
+		</a>
+	))}
+
+	<div class="flex flex-col w-4/5 mx-auto py-2 mt-7">
+		<a href="https://www.domestika.org/fr/diegodn">
+			<sup>1</sup> Image credit: Diego Díaz Nuñez
+		</a>
+	</div>
+</Layout>

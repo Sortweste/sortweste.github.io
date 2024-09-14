@@ -1,0 +1,68 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<title>Festivals</title>
+	</head>
+	<body>
+		<Navbar />
+  <main class="bg-slate-900 text-slate-100 py-6">
+    <slot />
+  </main>
+  <Footer />
+	</body>
+</html>
+
+<style is:global>
+	* {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Montserrat', system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  img, video, svg {
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  
+  img {
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+  }
+  
+  body {
+    min-height: 100dvh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  p {
+    /* width: clamp(25ch, 50%, 45ch); */
+    text-wrap: pretty;
+  }
+</style>

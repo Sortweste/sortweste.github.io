@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets"
+import Layout from "../layouts/Main.astro"
+---
+<Layout>
+  <h1 class="text-3xl text-center mb-6">Festival de la Piña</h1>
+  
+  <p class="text-xl my-4 w-4/5 mx-auto">Siendo el de mayor cultivo en el municipio. La fiesta surgió para promover este producto</p>
+
+  <div class="flex flex-col items-center mx-auto w-4/5 gap-6">
+    <Image src="/images/pina_1.jpg" alt="" width={256} height={256} class="rounded-md object-contain" />
+    <Image src="/images/pina_2.jpg" alt="" width={256} height={256} class="rounded-md object-contain" />
+    <Image src="/images/pina_3.jpg" alt="" width={256} height={256} class="rounded-md object-contain" />
+  </div>
+
+</Layout>
