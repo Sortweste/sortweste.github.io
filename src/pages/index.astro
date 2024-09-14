@@ -3,37 +3,59 @@ import Layout from "../layouts/Main.astro"
 
 const items = [
 	{
-		name: 'Festival de los Farolitos',
+		name: 'Festival of Lanterns',
 		slug: '/farolitos',
-		description: 'Celebracion en honor a las víspera del nacimiento de la Virgen María',
+		description: `It's a festival celebrated on the eve of the Nativity of the Blessed Virgin Mary across many towns in Ahuachapán Department. 
+It was originally celebrated in the town of Ahuachapán where a lantern was placed in each house.
+Nowadays this tradition has extended to many towns where not only houses but also church, town halls and parks are adorned with lanterns.
+It has been celebrated for 170 years on September 7th.
+
+As a more detailed example, in the town of Ataco, a figure of the Virgin Mary is carried in a procession through the town.
+This festival is celebrated all night and ends with a fireworks display.`,
 		ubicacion: 'Ahuachapan',
 		background: '/images/farolitos_1.png'
 	},
 	{
-		name: 'Festival de la Calabiuza',
+		name: 'Skull Festival',
 		slug: '/calabiuza',
-		description: 'Se celebra cada 1 de noviembre. Tiran de carretas chillonas y recorren las principales calles del municipio. Ángeles somos y del cielo venimos pidiendo ayote para todo el camino',
+		description: `
+		It's a festival celebrated on the eve of The Commemoration of All the Faithful Departed.
+The inhabitants of the town of Tonacatepeque dress up as angel and demons.
+Some of them dress up as Siguanaba.
+They also make many Weeping Wagons adorned with skulls and pumpkins known as ayote.
+This festival is celebrated all night with bonfires being lit and people dancing around them.
+After that, the Wagons are pulled across the main streets of the town while everyone screams: "We are angels that came from sky, we need ayote to continue our path".
+The festival ends with the inhabitants giving ayote to all participants.
+		`,
 		ubicacion: 'Tonacatepeque',
 		background: '/images/calabiuza_1.png'
 	},
 	{
-		name: 'Festival de las Bolas de Fuego',
+		name: 'Nejapa Fireballs',
 		slug: '/bolas-de-fuego',
-		description: 'Equipos que se lanzan entre sí bolas de fuego. Celebrada cada 31 de agosto, asegura que el Diablo lanzaba bolas de fuego a San Jerónimo Doctor, patrono del Municipio, cuando éste oraba.',
+		description: `
+			As a remembrance of a volcanic eruption that forced the inhabitants of the town of Nejapa to evacuate, in which the eruption looked like fire rising from the ground, it's a celebration that happens every August 31st.
+Some inhabitants also state that this celebration commemorates when the Devil attacked Saint Jerome with fireballs.
+Two teams attack each other with fireballs across the main street.
+		`,
 		ubicacion: 'Nejapa',
 		background: '/images/nejapa_1.webp'
 	},
 	{
 		name: 'Festival de la Piña',
 		slug: '/pina',
-		description: 'Siendo el de mayor cultivo en el municipio. La fiesta surgió para promover este producto',
+		description: `It's a festival to celebrate the pineapple harvest in the town of Santa Maria Ostuma.
+It's held twice per year.
+Inhabitants create many products using pineapple, such as jam, juice, tamales and pupusas.
+The town is decorated with many pineapple-themed images.
+According to the legend, long ago an angel came to the town and was injured by the pineapple shrub and his blood fell to the ground making it fertile for pineapples to grow.`,
 		ubicacion: 'Santa Maria Ostuma',
 		background: '/images/pina_1.jpg'
 	}
 ];
 ---
 <Layout>
-	<h1 class="text-center mb-4 text-3xl">Festivales en El Salvador</h1>
+	<h1 class="text-center mb-4 text-3xl">El Salvador Festivals</h1>
 	{items.map((item) => (
 		<a style={{ 'background-image': `url("${item.background}")` }} href={item.slug} class:list={['w-full px-[2rem] h-64 items-center py-8 flex flex-col bg-cover bg-center bg-no-repeat']}>
 			<div class="flex flex-col rounded-md w-80 h-56 py-4 px-6 bg-slate-100 text-black">
